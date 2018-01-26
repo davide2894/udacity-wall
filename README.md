@@ -1,6 +1,8 @@
 # Memento - a global book of Udacity Memories
 
-Memento is an open-source web app to preserve the memories of students in the *Google Developer Challenge Scholarship - Front-End Dev 2017/2018*, for all the times to come
+Memento is an open-source web app to preserve the memories of students in the *Google Developer Challenge Scholarship - Front-End Dev 2017/2018*, for all the times to come.
+
+[**Read the official blog**](https://italiansproject.blogspot.it)
 
 
 ## Contributing
