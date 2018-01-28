@@ -48,7 +48,7 @@ git pull upstream master
 
 For more information about remotes check [this tutorial](https://help.github.com/articles/adding-a-remote/)
 
-* Congratulations, you can start to make your chages!
+* Congratulations, you can start to make your changes!
 
 
 * When you are ready to submit your work, it's time to open a **Pull Request**. Be sure to propose it into the branch master.
