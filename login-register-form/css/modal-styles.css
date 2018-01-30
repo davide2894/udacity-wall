@@ -1,4 +1,9 @@
+/*
+    Login/Sign-up form
+*/
+
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -140,6 +145,6 @@ input[type=text], input[type=password], input[type=email] {
 }
     
 @keyframes zoom {
-    from {transform: scale(0);}
-    to {transform: scale(1);}
+    from {-webkit-transform: scale(0);transform: scale(0);}
+    to {-webkit-transform: scale(1);transform: scale(1);}
 }

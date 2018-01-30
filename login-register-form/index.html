@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login form test by DevMikko</title>
+    <!-- Style files -->
+    <link rel="stylesheet" src="text/css" href="css/modal-styles.css">
+    <!-- Google's fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<body>
+
+    <!-- login/signup forms -->
+    <div class="login-signup-form">
+        <!-- Login button -->
+        <button class="btn" id="form-opening">Join now!</button>
+
+        <!-- Modal (Register & Login forms) -->
+        <div class="modal-bg">
+            <div class="modal-box zoom-in">
+                <div class="img-box">
+                    <span class="close" title="Close">&times;</span>
+                    <img alt="placeholder" class="img-placeholder" src="img/placeholder.png">
+                </div>
+
+                <div class="tabs-box">
+                    <button class="tab current" id="login-btn">Login</button>
+                    <!-- DON'T REMOVE! THIS COMMENT REMOVES
+					WHITE SPACE BETWEEN INLINE BUTTONS --><button class="tab" id="register-btn">Register</button>
+                </div>
+
+                <div class="container">
+                    <form id="login">
+                        <label class="lf-text"><strong>Username</strong></label>
+                        <br>
+                        <input type="text" placeholder="Enter your username">
+                        <br>
+                        <label class="lf-text"><strong>Password</strong></label>
+                        <br>
+                        <input type="password" placeholder="Enter your password">
+                        <br>
+                        <label class="lf-text"><input type="checkbox" checked="checked"> Remember me</label>
+                        <br><br>
+                        <input class="btn" type="submit" value="Login">
+                        <br><br>
+                        <span class="lf-text">Forgot your <a href="#">password</a>?</span>
+                    </form>
+
+                    <form style="display: none;" id="register">
+                        <label class="lf-text"><strong>Username</strong></label>
+                        <br>
+                        <input type="text" placeholder="Enter your username">
+                        <br>
+                        <label class="lf-text"><strong>Password</strong></label>
+                        <br>
+                        <input type="password" placeholder="Enter your password">
+                        <br>
+                        <label class="lf-text"><strong>Confirm password</strong></label>
+                        <br>
+                        <input type="password" placeholder="Enter again your password">
+                        <br>
+                        <label class="lf-text"><strong>E-mail</strong></label>
+                        <br>
+                        <input type="email" placeholder="Enter your e-mail">
+                        <br><br>
+                        <input class="btn" type="submit" value="Register">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- end of login/signup forms -->
+
+    <!-- Javascript files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
