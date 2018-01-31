@@ -189,6 +189,7 @@ body * > {
     flex-direction: column;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    text-align: center;
 }
 
 
@@ -657,10 +658,6 @@ input[type=email] {
 ----------------------------------------------------------------------------------------------------------
 */
 .book-container {
-    position: absolute;
-    top: 57%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
 }
 
@@ -827,7 +824,6 @@ input[type=email] {
         padding 0.1em 2em;
     }
     .book {
-        margin-bottom: 1em;
     }
     .my-memo-book {
         height: 60vh;
@@ -846,7 +842,6 @@ input[type=email] {
     }
     .book {
         width: 60vw;
-        margin: 1em 0;
     }
     .my-memo-book {
         height: 65vh;
@@ -947,7 +942,6 @@ input[type=email] {
     .book {
         max-width: 40vw;
         height: 60vh;
-        margin-top: 2em;
     }
 }
 
