@@ -22,7 +22,7 @@ var browserSync = require("browser-sync").create();
 gulp.task("browserSync", function () {
     browserSync.init({
         server: {
-            baseDir: "src"
+            baseDir: "docs"
         }
     })
 });
@@ -31,9 +31,9 @@ gulp.task("browserSync", function () {
 //then watch any sass, html, js file
 //and at each save inject new html, css, js into browser
 gulp.task("watch", ["browserSync"], function () {
-    gulp.watch("src/css/*.css", browserSync.reload);
-    gulp.watch("src/*.html", browserSync.reload);
-    gulp.watch("src/js/*.js", browserSync.reload);
+    gulp.watch("docs/css/*.css", browserSync.reload);
+    gulp.watch("docs/*.html", browserSync.reload);
+    gulp.watch("docs/js/*.js", browserSync.reload);
 });
 
 //Optimization tasks
@@ -41,7 +41,7 @@ gulp.task("watch", ["browserSync"], function () {
 
 //Useref: minify and concatenate .js .css files
 gulp.task("useref", function () {
-    return gulp.src("src/*.html")
+    return gulp.src("docs/*.html")
         .pipe(useref())
         //minifies .js files
         .pipe(gulpIf("*.js", uglify()))
@@ -50,7 +50,7 @@ gulp.task("useref", function () {
 });
 
 gulp.task("cssUrl", function () {
-    gulp.src("src/css/styles.css")
+    gulp.src("docs/css/styles.css")
         .pipe(cssUrl({
             prepend: "/dist/"
         }))
@@ -60,7 +60,7 @@ gulp.task("cssUrl", function () {
 
 //minify images
 gulp.task("images", function () {
-    return gulp.src("src/images/**/*")
+    return gulp.src("docs/images/**/*")
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{
@@ -76,7 +76,7 @@ gulp.task('cache:clear', function (callback) {
 })
 
 gulp.task("fonts", function () {
-    return gulp.src("src/fonts/**/*")
+    return gulp.src("docs/fonts/**/*")
         .pipe(gulp.dest("dist/fonts"))
 })
 

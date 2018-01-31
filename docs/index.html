@@ -20,9 +20,9 @@
     <title>Udacity Wall</title>
     <script src="https://use.fontawesome.com/76d00d553b.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400" type="text/css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/design.js"></script>
+    <script src="./js/design.js"></script>
 </head>
 
 <body>
@@ -45,7 +45,7 @@
 
 
     <div class="page-wrapper">
-        <!-- Page: Main -->
+        <!-- Page: Main -l->
 
         <!-- Navbar -->
         <nav class="nav-container">
@@ -64,20 +64,20 @@
               </a>
                         </div>
                         <ul class="menu-list" role="menu">
-                            <li class="menu-option">My memories</li>
-                            <li class="menu-option">Write a memory</li>
+                            <li class="menu-option menu-write">Write a memory</li>
+                            <li class="menu-option menu-mymemo">My memories</li>
                         </ul>
 
                     </div>
                 </div>
             </div>
 
-            <img src="images/u%20wall%202.svg" alt="" class="logo">
+            <a class="logo" href="./index.html"></a><img src="images/u%20wall%202.svg" alt="" class="logo">
 
-            <a class="navbar-page-link" href="#">
+            <a class="navbar-page-link menu-write" href="#">
                 <p>Write a memory</p>
             </a>
-            <a class="navbar-page-link" href="#">
+            <a class="navbar-page-link menu-mymemo" href="#">
                 <p>My memories</p>
             </a>
 
@@ -148,6 +148,8 @@ WHITE SPACE BETWEEN INLINE BUTTONS --><button class="tab" id="register-btn">Regi
 
 
         <!-- REST OF THE PAGE -->
+
+        <!-- HOMEPAGE -->
         <div class="main-container">
 
             <picture class="udacity-book-container">
@@ -155,26 +157,53 @@ WHITE SPACE BETWEEN INLINE BUTTONS --><button class="tab" id="register-btn">Regi
                 <img src="./images/Udacity-book-small.png" alt="Udacity book" />
             </picture>
 
-            <div class="book-wrapper">
-                <div class="book-flex-row">
-                    <i class="arrow-left"></i>
-                    <div class="book"></div>
-                    <i class="arrow-right"></i>
+            <div class="wall-wrapper">
+                <div class="wall"></div>
+                <div class="btn-arrow-container">
+                    <button class="btn-arrow"><p class="arrow left"></p></button>
+                    <button class="btn-arrow"><p class="arrow right"></p></button>
                 </div>
             </div>
-
-            <button class="leave-your-memory">
-                Leave your memory    
-                </button>
         </div>
 
-    </div>
+        <!-- WRITE YOUR MESSAGE -->
+        <div class="book-container message-container">
+            <div class="book">
+                <textarea id="message" name="message" form="write-message" rows="10" cols="24" maxlength="150" minlength="1" required>Enter Message Here...</textarea>
+            </div>
+            <form id="write-message">
+                <button class="message-button msg-cancel"><p>Cancel</p></button>
+                <button class="message-button msg-submit"><p>Submit</p></button>
+            </form>
+        </div>
+
+        <!-- MY MEMORIES -->
+        <div class="book-container all-container">
+            <div class="book my-memo-book">
+                <form id="checklist-messages">
+                    <!-- TODO these checkboxes have to be deleted and to be created with jQuery according to user data -->
+                    <div class="entry">
+                        <input type="radio" id="usernr-messagenr-01" name="usernr-messagenr-01" class="chklist-chkbox">
+                        <label for="usernr-messagenr-01" class="chklist-label 01">First 5 words...</label>
+                    </div>
+                    <div class="entry">
+                        <input type="radio" id="usernr-messagenr-02" name="usernr-messagenr-02" class="chklist-chkbox">
+                        <label for="usernr-messagenr-02" class="chklist-label 02">First 5 words...</label>
+                    </div>
+                    <div class="entry">
+                        <input type="radio" id="usernr-messagenr-03" name="usernr-messagenr-03" class="chklist-chkbox">
+                        <label for="usernr-messagenr-03" class="chklist-label 03">First 5 words...</label>
+                    </div>
+                </form>
+            </div>
+            <form id="manage-message">
+                <button class="message-button msg-delete">Delete</button>
+                <button class="message-button msg-edit">Edit</button>
+            </form>
+        </div>
+        <!-- END OF MY MEMORIES -->
 
     </div>
-
-
-
-
 </body>
 
 </html>
