@@ -29,8 +29,7 @@
                 </div>
 
                 <div class="tabs-box">
-                    <button class="tab current" id="login-btn">Login</button>
-                    <!-- DON'T REMOVE! THIS COMMENT REMOVES
+                    <button class="tab current" id="login-btn">Login</button><!-- DON'T REMOVE! THIS COMMENT REMOVES
 					WHITE SPACE BETWEEN INLINE BUTTONS --><button class="tab" id="register-btn">Register</button>
                 </div>
 
@@ -48,7 +47,7 @@
                         <br><br>
                         <input class="btn" type="submit" value="Login">
                         <br><br>
-                        <span class="lf-text">Forgot your <a href="#">password</a>?</span>
+                        <span class="lf-text">Forgot your <a id="recovery-link" href="#">password</a>?</span>
                     </form>
 
                     <form style="display: none;" id="register">
@@ -70,6 +69,14 @@
                         <br><br>
                         <input class="btn" type="submit" value="Register">
                     </form>
+
+                    <form style="display: none;" id="psw-recovery">
+                        <label class="lf-text"><strong>E-mail</strong></label>
+                        <br>
+                        <input type="email" placeholder="Enter your e-mail">
+                        <br><br>
+                        <input class="btn" type="submit" value="Recovery">
+                    </form>					
                 </div>
             </div>
         </div>
