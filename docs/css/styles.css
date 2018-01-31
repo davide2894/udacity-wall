@@ -15,9 +15,11 @@ body {
     margin: 0;
     padding: 0;
     color: #263238;
-    background: linear-gradient(45deg, rgba(220, 223, 226, 1) 0%, rgba(30, 136, 229, 1) 100%) fixed;
     font-family: "Roboto", "sans-serif";
     height: 100vh;
+    background: -webkit-linear-gradient(top left, rgba(124, 250, 255, 1), rgba(30, 130, 229, 0.9)),no-repeat center/cover url("../images/bg-large-1x.jpeg");
+    background: -o-linear-gradient(top left, rgba(124, 250, 255, 1), rgba(30, 130, 229, 0.9)),no-repeat center/cover url("../images/bg-large-1x.jpeg");
+    background: linear-gradient(to bottom right, rgba(124, 250, 255, 1), rgba(30, 130, 229, 0.9)),no-repeat center/cover url("../images/bg-large-1x.jpeg");
 }
 body * > {
     -webkit-box-sizing: border-box;
@@ -42,7 +44,9 @@ body * > {
     /* Old browsers */
     /* FF3.6-15 */
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, rgba(220, 223, 226, 1) 0%, rgba(30, 136, 229, 1));
+    background: -webkit-linear-gradient(top right, rgba(22, 91, 160, 1), rgba(118, 190, 252, 1));
+    background: -o-linear-gradient(top right, rgba(22, 91, 160, 1), rgba(118, 190, 252, 1));
+    background: linear-gradient(to bottom left, rgba(22, 91, 160, 1), rgba(118, 190, 252, 1));
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcdfe2', endColorstr='#1e88e5', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
@@ -91,7 +95,7 @@ body * > {
     width: 25px;
     height: 25px;
     border-radius: 100%;
-    background-color: #448AFF;
+    background-color: #ddd;
 }
 
 .bubble-2 {
@@ -213,7 +217,7 @@ body * > {
     top: 0;
     width: 250px;
     height: 100%;
-    background: -webkit-gradient(linear, left bottom, left top, from(#333), to(rgba(30, 136, 229, 1)));
+    background: linear-gradient(to bottom, rgba(124, 250, 255, 1), rgba(30, 130, 229, 0.9));
     -webkit-transform: translateX(0);
     transform: translateX(0);
     transition-property: -webkit-transform;
@@ -300,7 +304,7 @@ body * > {
     margin-top: 0;
 }
 
-.menu-option > a{
+.menu-option {
     color: #fff;
     font-size: 1.4em;
     font-weight: 600;
@@ -310,11 +314,11 @@ body * > {
    padding: 20px 0 20px 20px;
    border-bottom: 1px solid #fff;
 }
-.menu-option>a:hover {
+.menu-option:hover {
     background: #fff;
     color: #333;
-    width: 100$;
-    opacity: 0.2;
+    width: 100%;
+    opacity: 0.4;
 }
 .menu-option: hover {
     cursor: pointer;
@@ -662,6 +666,7 @@ input[type=email] {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    margin-top: 0.6em;
 }
 
 .message-container {
