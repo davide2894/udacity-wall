@@ -21,7 +21,7 @@ body {
     background: linear-gradient(to bottom right, rgba(124, 250, 255, 1), rgba(30, 130, 229, 0.9)),no-repeat center/cover url("../images/bg-large-1x.jpeg");
     font-family: "Roboto", "sans-serif";    
 }
-body * > {
+body > * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Roboto", "sans-serif"
@@ -354,7 +354,7 @@ body * > {
 .logo,
 .navbar-page-link {
     display: none;
-}
+}   
 
 .logo:hover {
     cursor: pointer;

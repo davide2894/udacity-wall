@@ -1,0 +1,214 @@
+<!--
+-    This page will contain:
+-    "Welcome" screen at the beginning, fading away after a few seconds, then
+-
+-    then
+-
+-    "Main" page:
+-    * login/signup button
+-    * wall of memories
+-    * button: leave your memory
+-
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Udacity Wall</title>
+    <script src="https://use.fontawesome.com/76d00d553b.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" type="text/css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/design.js"></script>
+</head>
+
+<body>
+    <!-- THIS IS THE WELCOME PAGE -->
+    <div class="welcome-gradient">
+        <div class="welcome-container">
+
+            <img src="images/u%20wall%202.svg" alt="Udacity Wall logo">
+            <div class="loader">
+                <div class="spinner">
+                    <div class="bubble-1"></div>
+                    <div class="bubble-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF THE WELCOME PAGE -->
+    <!-- RESTOF PAGE -->
+    <!-- TODO: RENAME THE CLASS "REST-OF-PAGE" WITH RELEVANT NAME, DON'T FORGET RENAMING EVEN CSS AND JS -->
+
+
+    <div class="page-wrapper">
+        <!-- Page: Main -l->
+
+        <!-- Navbar -->
+        <nav class="nav-container">
+            <div class="hamburger-menu">
+                <a class="menu-toggle" href="#">
+          <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+        </a>
+                <div class="settings-opacity">
+                </div>
+                <div class="settings-panel">
+                    <div class="menu-container">
+                        <div class="menu-header">
+                            <img class="logo-side" src="./images/u%20wall%202.svg" alt="Udacty logo in side menu">
+                            <a class="menu-toggle" href="#">
+                <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+              </a>
+                        </div>
+                        <ul class="menu-list" role="menu">
+                            <li class="menu-option menu-write">
+                                Write a memory
+                            </li>
+                            <li class="menu-option menu-mymemo">
+                                My memories
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <a class="logo" href="./index.html"></a><img src="images/u%20wall%202.svg" alt="" class="logo">
+
+            <a class="navbar-page-link menu-write" href="#">
+                <p>Write a memory</p>
+            </a>
+            <a class="navbar-page-link menu-mymemo" href="#">
+                <p>My memories</p>
+            </a>
+
+            <!-- login/register forms -->
+            <div class="login-signup-form">
+                <!-- Login button -->
+                <button class="btn" id="form-opening">Join now!</button>
+                <button class="btn" id="logout">Logout</button>
+
+                <!-- Modal (Register & Login forms) -->
+                <div class="modal-bg">
+                    <div class="modal-box zoom-in">
+                        <div class="img-box">
+                            <span class="close" title="Close">&times;</span>
+                            <img alt="placeholder" class="img-placeholder" src="./images/placeholder.png">
+                        </div>
+
+                        <div class="tabs-box">
+                            <button class="tab current" id="login-btn">Login</button>
+                            <!-- DON'T REMOVE! THIS COMMENT REMOVES
+WHITE SPACE BETWEEN INLINE BUTTONS --><button class="tab" id="register-btn">Register</button>
+                        </div>
+
+                        <div class="container">
+                            <form id="login">
+                                <label class="lf-text"><strong>Username</strong></label>
+                                <br>
+                                <input type="text" placeholder="Enter your username">
+                                <br>
+                                <label class="lf-text"><strong>Password</strong></label>
+                                <br>
+                                <input type="password" placeholder="Enter your password">
+                                <br>
+                                <label class="lf-text"><input type="checkbox" checked="checked"> Remember me</label>
+                                <br><br>
+                                <input class="btn" type="submit" value="Login">
+                                <br><br>
+                                <span class="lf-text">Forgot your <a href="#">password</a>?</span>
+                            </form>
+
+                            <form style="display: none;" id="register">
+                                <label class="lf-text"><strong>Username</strong></label>
+                                <br>
+                                <input type="text" placeholder="Enter your username">
+                                <br>
+                                <label class="lf-text"><strong>Password</strong></label>
+                                <br>
+                                <input type="password" placeholder="Enter your password">
+                                <br>
+                                <label class="lf-text"><strong>Confirm password</strong></label>
+                                <br>
+                                <input type="password" placeholder="Enter again your password">
+                                <br>
+                                <label class="lf-text"><strong>E-mail</strong></label>
+                                <br>
+                                <input type="email" placeholder="Enter your e-mail">
+                                <br><br>
+                                <input class="btn" type="submit" value="Register">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end of login/register forms -->
+
+        </nav>
+        <!-- End of navbar -->
+
+
+        <!-- REST OF THE PAGE -->
+
+        <!-- HOMEPAGE -->
+        <div class="main-container">
+
+            <picture class="udacity-book-container">
+                <source media="(min-width: 650px)" srcset="./images/Udacity-book-medium.png">
+                <img src="./images/Udacity-book-small.png" alt="Udacity book" />
+            </picture>
+
+            <div class="wall-wrapper">
+                <div class="wall"></div>
+                <div class="btn-arrow-container">
+                    <button class="btn-arrow"><p class="arrow left"></p></button>
+                    <button class="btn-arrow"><p class="arrow right"></p></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- WRITE YOUR MESSAGE -->
+        <div class="book-container message-container">
+            <div class="book">
+                <textarea id="message" name="message" form="write-message" rows="10" cols="24" maxlength="150" minlength="1" required>Enter Message Here...</textarea>
+            </div>
+            <form id="write-message">
+                <button class="message-button msg-cancel"><p>Cancel</p></button>
+                <button class="message-button msg-submit"><p>Submit</p></button>
+            </form>
+        </div>
+
+        <!-- MY MEMORIES -->
+        <div class="book-container all-container">
+            <div class="book my-memo-book">
+                <form id="checklist-messages">
+                    <!-- TODO these checkboxes have to be deleted and to be created with jQuery according to user data -->
+                    <div class="entry">
+                        <input type="radio" id="usernr-messagenr-01" name="usernr-messagenr-01" class="chklist-chkbox">
+                        <label for="usernr-messagenr-01" class="chklist-label 01">First 5 words...</label>
+                    </div>
+                    <div class="entry">
+                        <input type="radio" id="usernr-messagenr-02" name="usernr-messagenr-02" class="chklist-chkbox">
+                        <label for="usernr-messagenr-02" class="chklist-label 02">First 5 words...</label>
+                    </div>
+                    <div class="entry">
+                        <input type="radio" id="usernr-messagenr-03" name="usernr-messagenr-03" class="chklist-chkbox">
+                        <label for="usernr-messagenr-03" class="chklist-label 03">First 5 words...</label>
+                    </div>
+                </form>
+            </div>
+            <form id="manage-message">
+                <button class="message-button msg-delete">Delete</button>
+                <button class="message-button msg-edit">Edit</button>
+            </form>
+        </div>
+        <!-- END OF MY MEMORIES -->
+
+    </div>
+</body>
+
+</html>

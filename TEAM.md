@@ -48,6 +48,8 @@
 
 
 ## BACK END
+* Paolo
+* Apostolis Ichtsis
 
 ### Database / HTTP Requests
 * Paolo
