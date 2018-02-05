@@ -24,7 +24,6 @@
 
 ### Web Designer
 * Lara
-* Nella
 * Vanessa
 * JakeS - Vector Graphic
 
