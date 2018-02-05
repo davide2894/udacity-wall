@@ -10,6 +10,9 @@
 * lybhy
 * Davide Iaiunese
 
+## GITHUB REPOSITORY
+* Davide Iaiunese
+* davjdek (fixed typos)
 
 ## TIMELINE
 * Mario
@@ -41,10 +44,11 @@
 * PietroMZ
 * Dev_Mikko
 * JakeS (support)
+* Davide Iaiunese
+* lybhy
 
 ### API
 * gclaudio
-
 
 ## BACK END
 * Paolo
