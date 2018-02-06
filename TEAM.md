@@ -1,10 +1,13 @@
 # Team
 
-## P.R.
+## Blog
 * lybhy 
 * Nella 
 * Vanessa
 
+## Video
+* Nella
+* angeloMys
 
 ## CODE SUPERVISORS
 * lybhy
