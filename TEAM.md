@@ -23,7 +23,7 @@
 ## RESEARCH AND SUPPORT
 * Ivan
 
-## FRONT END
+## FRONT-END
 
 ### UX designer
 * lybhy
@@ -53,7 +53,7 @@
 ### API
 * gclaudio
 
-## BACK END
+## BACK-END
 * Paolo
 * Apostolis Ichtsis
 
