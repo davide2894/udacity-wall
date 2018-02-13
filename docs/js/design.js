@@ -107,13 +107,14 @@ $(function () {
         // Prevent further mouseup intervention
         $this.unbind("mouseup");
         return false;
-    }).on("keypress", function(e) {
-        //let charCode = event.which || event.keyCode;
-        //alert(charCode);
-        var charCode = e.which || e.keyCode, exclude = [60,62];
-            if(~exclude.indexOf(charCode)) {
-                    e.preventDefault();
-            }
+    })
+    // forbid the user to type < or > characters on desktop and mobile
+    // solution adapted from https://stackoverflow.com/questions/36753548/keycode-on-android-is-always-229
+        .on("textInput", function(e) {
+                 var keyCode = e.originalEvent.data.charCodeAt(0);
+                 if(keyCode == 60 || keyCode == 62){
+                   e.preventDefault();
+                 }
         });
     })
 
