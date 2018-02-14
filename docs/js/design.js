@@ -79,6 +79,27 @@ $(function () {
         $('#message').val('');
         $('#message').attr('placeholder', '');
     })
+    .focus(function() {
+    var $this = $(this);
+    $this.select();
+
+    // Work around Chrome's little problem
+    $this.mouseup(function() {
+        // Prevent further mouseup intervention
+        $this.unbind("mouseup");
+        return false;
+    })
+    // forbid the user to type < or > characters on desktop and mobile
+    // solution adapted from https://stackoverflow.com/questions/36753548/keycode-on-android-is-always-229
+    .on("textInput", function(e) {
+                 var keyCode = e.originalEvent.data.charCodeAt(0);
+                 if(keyCode == 60 || keyCode == 62){
+                   e.preventDefault();
+                 }
+        });
+    })
+    
+    
     $('.msg-cancel').click(function (event) {
         event.preventDefault();
         $('#message').val('');
@@ -98,25 +119,7 @@ $(function () {
         $('.all-container').css('display', 'none');
         $('.wall-wrapper').css('display', 'block');
     })
-    $("#message").focus(function() {
-    var $this = $(this);
-    $this.select();
-
-    // Work around Chrome's little problem
-    $this.mouseup(function() {
-        // Prevent further mouseup intervention
-        $this.unbind("mouseup");
-        return false;
-    })
-    // forbid the user to type < or > characters on desktop and mobile
-    // solution adapted from https://stackoverflow.com/questions/36753548/keycode-on-android-is-always-229
-        .on("textInput", function(e) {
-                 var keyCode = e.originalEvent.data.charCodeAt(0);
-                 if(keyCode == 60 || keyCode == 62){
-                   e.preventDefault();
-                 }
-        });
-    })
+    
 
 
 
